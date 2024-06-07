@@ -6,7 +6,7 @@ import {
     IoLogoLinkedin,
     IoLogoDribbble,
     IoIosMail,
-} from "react-icons/io/index";
+} from "react-icons/io";
 
 type Social = {
     id: string;

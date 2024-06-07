@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import type { ReactNode } from "react";
-import { IoMdMenu, IoIosClose } from "react-icons/io/index";
+import { IoMdMenu, IoIosClose } from "react-icons/io";
 import NavbarList from "./NavbarList";
 
 type Props = {

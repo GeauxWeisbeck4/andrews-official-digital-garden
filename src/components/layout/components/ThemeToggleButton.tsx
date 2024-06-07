@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IoIosMoon, IoIosSunny } from "react-icons/io/index";
+import { IoIosMoon, IoIosSunny } from "react-icons/io";
 
 export default function ThemeToggleButton() {
   const [theme, setTheme] = useState("light");

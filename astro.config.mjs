@@ -8,5 +8,11 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), react(), partytown(), icon()]
+  site: "https://andrews-digital-garden.netlify.app",
+  integrations: [
+      tailwind(),
+      sitemap(),
+      react(),
+      partytown(),
+      icon()]
 });

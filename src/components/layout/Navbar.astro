@@ -1,9 +1,8 @@
 ---
-import Icon from "@components/Common/Icon/Icon.astro";
+import { Icon } from "astro-icon/components"
 import ThemeToggleButton from "./components/ThemeToggleButton"
 import NavbarButton from "./components/NavbarButton"
 import NavbarList from "./components/NavbarList"
-
 ---
 
 <div class="flex flex-row justify-between items-center md:space-y-4 w-full max-w-4xl mx-auto mb-4 space-y-0 p-2 md:px-0 md:py-4" >
@@ -14,6 +13,6 @@ import NavbarList from "./components/NavbarList"
   <ThemeToggleButton client:load />
 
   <NavbarButton client:load>
-    <Icon icon="menu" height="20" width="20" />
+    <Icon name="material-symbols:menu" height="20" width="20" />
   </NavbarButton>
 </div>
