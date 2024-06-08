@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PortfolioItem from "../components/Portfolio/PortfolioItem";
+import PortfolioItemLink from "../components/Portfolio/PortfolioItemLink";
+import PageLayout from "../layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+
+const items = (await getCollection("portfolio")).sort(
+    (a, b) => Date.parse(`${b.data.publishedAt}`) - Date.parse(`${a.data.publishedAt}`)
+);
+console.log("👻 ~ items:", items);
+
+const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Portfolio", url: "/portfolio" },
+];
+---
+
+<PageLayout
+    title="Portfolio"
+    description="A collection of projects that I have created and maintained."
+    breadcrumbs={breadcrumbs}
+    image="/assets/images/portfolio/portfolio.svg"
+>
+    <section class="flex flex-col flex-1 h-full">
+        <div class="columns-1 md:columns-3 gap-4 mb-6">
+            {
+                items.map((item) => {
+                    if (!item.data.link) return <PortfolioItem data={item} />;
+                    if (item.data.link) return <PortfolioItemLink data={item} />
+                })
+            }
+        </div>
+    </section>
+</PageLayout>

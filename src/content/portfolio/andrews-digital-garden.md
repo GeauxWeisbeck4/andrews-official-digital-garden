@@ -1,9 +1,9 @@
 ---
-title: "GeauxCode.dev Website"
+title: "Andrew's Digital Garden"
 publishedAt: 2024-06-01
 description: "Creating my personal portfolio and digital garden"
 author: "andrew-weisbeck"
-heroImage: "/assets/images/portfolio/geauxcode.png"
+heroImage: "/assets/images/portfolio/digitalgarden.png"
 tags: ["astro", "react", "tailwindcss"]
 year: 2024
 lang: "EN"

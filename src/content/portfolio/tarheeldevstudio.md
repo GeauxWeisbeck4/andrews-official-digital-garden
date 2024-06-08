@@ -3,7 +3,7 @@ title: "Tar Heel Dev Studio Website"
 publishedAt: 2024-06-01
 description: "Creating the Marketing website for my agency Tar Heel Dev Studio."
 author: "andrew-weisbeck"
-heroImage: "/assets/images/portfolio/tarheeldevstudio.png"
+heroImage: "/assets/images/portfolio/tarheeldevelopers.png"
 tags: ["astro", "react", "tailwindcss"]
 year: 2024
 lang: "EN"

@@ -3,7 +3,7 @@ title: "HuskerJS.dev Website"
 publishedAt: 2024-06-07
 description: "I created a Husker blog to show my enthusiasm for my Nebraska Cornhuskers."
 author: "andrew-weisbeck"
-heroImage: "/assets/images/portfolio/geauxcode.png"
+heroImage: "/assets/images/portfolio/huskerjs.png"
 tags: ["astro", "react", "tailwindcss"]
 year: 2022
 lang: "EN"

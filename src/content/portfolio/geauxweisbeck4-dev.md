@@ -3,7 +3,7 @@ title: "GeauxWeisbeck4.dev - My First Portfolio Site"
 publishedAt: 2024-06-03
 description: "Creating my first personal portfolio website"
 author: "andrew-weisbeck"
-heroImage: "/assets/images/portfolio/geauxweisbeck4.png"
+heroImage: "/assets/images/portfolio/andrewsportfolio.png"
 tags: ["astro", "react", "tailwindcss"]
 year: 2024
 lang: "EN"
