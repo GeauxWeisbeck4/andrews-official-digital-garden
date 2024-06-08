@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+
+import { groupNotes } from "../helpers/arrayHelper";
+import NotesSection from "../components/DigitalGarden/NotesSection.astro";
+
+const notes = (await getCollection("notes", (note) => {
+    return note.data.published;
+})).sort(
+    (a, b) => Date.parse(`${b.data.updatedAt}`) - Date.parse(`${a.data.updatedAt}`)
+);
+
+const groupedNotes = groupNotes(notes);
+const uniqueCategories: Array<string> = [...new Set(notes.map((note) => note.data.category).flat())];
+const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Digital Garden", url: "/digital-garden" },
+]
+---
+
+<PageLayout
+    title="Digital Garden"
+    description="My own little piece of the internet where I share my notes, ideas, and resources with those who care about knowledge and content creation."
+    breadcrumbs={breadcrumbs}
+    image="/assets/images/garden/garden.svg"
+>
+    <NotesSection uniqueCategories={uniqueCategories} groupedNotes={groupedNotes} />
+</PageLayout>

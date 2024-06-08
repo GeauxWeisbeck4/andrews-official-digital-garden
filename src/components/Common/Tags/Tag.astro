@@ -1,0 +1,18 @@
+---
+interface Props {
+    url: string;
+    name: string;
+    icon: string;
+    isSelected?: boolean;
+}
+
+const { url, name, icon, isSelected } = Astro.props;
+---
+
+<li class="group">
+    <a href={url}>
+        <div class="bg-white dark:bg-gray-950 flex flex-row items-center mr-3 py-3 px-2 gap-2 rounded-md transition-all duration-100 outline outline-black dark:outline-white outline-1 hover:outline-2 m-0 5" class:list="{[{'outline-2' : isSelected}]}">
+           <span class="text-sm group-hover:underline" class:list={[{'underline' : isSelected}]}>{name}</span>
+        </div>
+    </a>
+</li>
