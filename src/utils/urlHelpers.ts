@@ -1,4 +1,4 @@
-type RootPathType = 'posts' | 'notes' | 'portfolio' | 'resources';
+type RootPathType = 'posts' | 'digital-garden' | 'portfolio';
 
 export const getPostUrl = (rootPath: RootPathType, slug: string) => {
     return `/${rootPath}/${slug}`

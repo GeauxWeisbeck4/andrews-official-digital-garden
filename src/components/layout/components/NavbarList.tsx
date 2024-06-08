@@ -3,11 +3,9 @@ import React from 'react';
 const ITEMS = [
   { link: "/", name: "Home" },
   { link: "/about", name: "About" },
-  { link: "/notes", name: "Notes" },
   { link: "/blog", name: "Blog" },
-  { link: "/resources", name: "Resources" },
+  { link: "/digital-garden", name: "Digital Garden" },
   { link: "/portfolio", name: "Portfolio" },
-  { link: "/contact", name: "Contact" },
 ];
 
 type Props = {

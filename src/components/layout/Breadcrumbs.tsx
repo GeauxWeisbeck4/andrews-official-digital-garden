@@ -10,13 +10,13 @@ const Breadcrumbs = ({ items }: Props) => {
     return (
         <nav className="w-full rounded-md text-sm my-2">
             <ol className="list-reset flex">
-                {items.map((item, index) => (
+                {items?.map((item, index) => (
                     <React.Fragment key={index}>
                         {index === items.length - 1 ? (
                             <ItemActive name={item.name} />
                         ) : (
                             <>
-                              <Item name={item.name} url={item.url} />
+                                <Item name={item.name} url={item.url} />
                                 <Separator />
                             </>
                         )}
@@ -34,7 +34,7 @@ const Item = ({ url, name }: BreadcrumbItemType) => (
         <a
             href={url}
             className="capitalize text-primary hover:underline hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
-            >
+        >
             {name}
         </a>
     </li>

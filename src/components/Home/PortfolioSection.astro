@@ -1,0 +1,20 @@
+---
+import HomeSection from "./components/HomeSection.astro";
+import PortfolioCard from "./components/PortfolioCard";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    projects: CollectionEntry<"portfolio">[];
+}
+
+const { projects } = Astro.props
+---
+
+<HomeSection
+    title="Featured Projects"
+    className="flex flex-col flex-1"
+>
+    <div class="flex flex-col md:flex-row gap-4 md:gap-6 -z-0">
+        {projects.map((project) => <PortfolioCard data={project} />)}
+    </div>
+</HomeSection>

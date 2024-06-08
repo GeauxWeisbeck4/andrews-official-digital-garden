@@ -1,0 +1,20 @@
+---
+import HomeSection from "./components/HomeSection.astro";
+import PostCard from "./components/PostCard";
+import type { CollectionEntry} from "astro:content";
+
+interface Props {
+    posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<HomeSection
+    title="Latest Posts"
+    className="flex flex-col flex-1"
+>
+    <div class="flex flex-col md:flex-row gap-4 md:gap-6 -z-0">
+        {posts.map((post) => <PostCard data={post} />)}
+    </div>
+</HomeSection>

@@ -1,0 +1,15 @@
+---
+interface Props {
+    url?: string;
+    title: string;
+    icon: string;
+    description?: string;
+}
+const { url, title, icon } = Astro.props;
+---
+
+<li class="relative group">
+    <a href={url} class="flex justify-center items-center flex-col pt-8 pb-4 h-[160px] md:h-[204px] bg-white dark:bg-gray-950 gap-6 outline outline-1 outline-black dark:outline-transparent dark:hover:outline-white rounded-md hover:outline-2 hover:shadow-solid-lg dark:hover:shadow-solid-lg dark:hover:shadow-white transition-all duration-200">
+        <span class="group-hover:underline">{title}</span>
+    </a>
+</li>

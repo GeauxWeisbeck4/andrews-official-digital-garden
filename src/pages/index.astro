@@ -1,8 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Home/Hero.astro";
+import NotesSection from "../components/Home/NotesSection.astro";
+import PostsSection from "../components/Home/PostsSection.astro";
+import PortfolioSection from "../components/Home/PortfolioSection.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection('blog')).sort((a, b) =>
+  Date.parse(`${b.data.publishedAt}`) - Date.parse(`${a.data.publishedAt}`)
+).slice(0, 3);
+const notes = await getCollection("notes");
+const projects = (await getCollection('portfolio')).sort((a, b) =>
+  Date.parse(`${b.data.publishedAt}`) - Date.parse(`${a.data.publishedAt}`)
+).slice(0, 3);
 ---
 
 <Layout title="Andrew's Digital Garden" descriptio="Andrew is a full stack web developer who writes about software design and development.">
 	<Hero />
+	<PostsSection posts={posts} />
+	<NotesSection notes={notes} />
+	<PortfolioSection projects={projects} />
 </Layout>
