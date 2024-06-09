@@ -56,14 +56,14 @@ const authors = defineCollection({
     }),
 });
 
-const youtube = defineCollection({
-    type: "data",
-    schema: z.object({
-        title: z.string(),
-        link: z.string().url(),
-        videoId: z.string().optional(),
-        date: z.string().transform((str) => new Data(str)),
-    }),
-});
+// const youtube = defineCollection({
+//     type: "data",
+//     schema: z.object({
+//         title: z.string(),
+//         link: z.string().url(),
+//         videoId: z.string().optional(),
+//         date: z.string().transform((str) => new Data(str)),
+//     }),
+// });
 
-export const collections = { blog, authors, notes, youtube, portfolio };
+export const collections = { blog, authors, notes, portfolio };
