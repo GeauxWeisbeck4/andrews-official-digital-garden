@@ -16,4 +16,8 @@ tags:
   - "Tech Review"
 ---
 
-The Astro team continues to up their game with the hottest web framework on the market today by releasing their latest feature - Astro DB.
+The Astro team continues to up their game with the hottest web framework on the market today by releasing their latest feature - Astro DB. I decided to try out a tutorial and then attempt to build something on my own using Astro DB. Here is what I learned.
+
+## Astro DB Overview
+
+Astro DB is built on 

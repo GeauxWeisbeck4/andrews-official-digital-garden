@@ -12,7 +12,7 @@ color: "bg-blue-marguerite-700"
 
 ## Description
 
-You can read my post about building my personal digital garden and portfolio on the blog.
+You can read my post about building my personal digital garden and portfolio on the blog. It explains in greater detail in how this website was created. 
 
 ## Web Development
 
